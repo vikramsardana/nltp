@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+function addTextBox(btn) {
+    var element = document.createElement("input");
+    element.setAttribute("type", "text");
+    element.setAttribute("value", "");
+    element.setAttribute("name", "playername[]");
+	element.setAttribute("placeholder", "Player Name");
+    btn.parentNode.insertBefore(element, btn)
+	
+	var element2 = document.createElement("input");
+    element2.setAttribute("type", "text");
+    element2.setAttribute("value", "");
+    element2.setAttribute("name", "bidamount[]");
+	element2.setAttribute("placeholder", "Bid Amount");
+    btn.parentNode.insertBefore(element2, btn)
+	
+	linebreak = document.createElement("br");
+	btn.parentNode.insertBefore(linebreak, btn);
+}
+
+</script>
+<body>
+
+
+
+<form name = "Bid Form">
+<b>Team Name:</b><br>
+<select name="team">
+  <option value="21 Juke Street">21 Juke Street</option>
+  <option value="877-CAPSNOW">877-CAPSNOW</option>
+  <option value="Army of Re">Army of Re</option>
+  <option value="Attack the Block">Attack the Block</option>
+  <option value="Bad News Balls">Bad News Balls</option>
+  <option value="Ball Fondlers">Ball Fondlers</option>
+  <option value="Ball or Nothing">Ball or Nothing</option>
+  <option value="Balladega Nights">Balladega Nights</option>
+  <option value="Block-A-Doodle-Doo">Block-A-Doodle-Doo/option>
+  <option value="Blockwork Orange">Blockwork Orange</option>
+  <option value="Cap'n Crunch">Cap'n Crunch</option>
+  <option value="Circular Logic">Circular Logic</option>
+  <option value="Coup d'Ecap">Coup d'Ecap</option>
+  <option value="House of Caps">House of Caps</option>
+  <option value="Insane Cap Posse">Insane Cap Posse</option>
+  <option value="Jukes and Cats">Jukes and Cats</option>
+  <option value="Mo Money Mo Poplems">Mo Money Mo Poplems</option>
+  <option value="Pequenos Pandas">Pequenos Pandas</option>
+  <option value="Soviet Ballers">Soviet Ballers</option>
+  <option value="The Capaliers">The Capaliers</option>
+  <option value="The Empire Snipes Back">The Empire Snipes Back</option>
+  <option value="The Tagalongs">The Tagalongs</option>
+  <option value="Warden and the Inmates">Warden and the Inmates</option>
+  <option value="Whitecaps">Whitecaps</option>
+</select>
+  <br>
+  <p></p>
+<b>Bids:</b>
+ <table>
+<tr>
+<td><input id="pname" type="text" name="playername[]" placeholder="Player Name" /></td>
+<td><input id="amount" type="text" name="bidamount[]" placeholder="Bid Amount" /></td>
+</tr>
+</table>
+ 
+<input type="button" id="btn" onclick="addTextBox(btn)" value="Add Bid">  <br><p></p>
+ <input type="submit" id="submitbtn" value="Submit Bids">   
+</form>
+
+</body>
+</html>
